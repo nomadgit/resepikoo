@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<p>
+    
+    
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= simple_format(@recipe.title) %>
+</p>
+
+<%= image_tag @recipe.image_url,:width => 400%>
+
+<p>
+  <strong>Description:</strong>
+  <%= simple_format(@recipe.description) %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= simple_format(@recipe.ingredients) %>
+</p>
+
+<p>
+  <strong>Directions:</strong>
+  <%= simple_format(@recipe.directions) %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @recipe.category.title unless @recipe.category.nil? %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @recipe.published %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

@@ -1,0 +1,8 @@
+
+        <div class="home-widget">
+          <center><h6><%= recipe.title %></h6></center>
+          <%=link_to (image_tag recipe.image_url, :width => 300), recipe_path(recipe)%>
+          
+          <p><%=truncate(recipe.description, :length => 90) { link_to "Read more", recipe_path(recipe) }%></p>
+        </div>
+       
